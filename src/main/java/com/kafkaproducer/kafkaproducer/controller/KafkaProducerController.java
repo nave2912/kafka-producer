@@ -16,7 +16,7 @@ public class KafkaProducerController {
 	@GetMapping("/msg")
 	public String kafkaMessage() {
 		System.out.println("TOPIC" + TOPIC);
-		kafkatemplate.send(TOPIC, new UserDetails(1,"naveen","naveenvenkat@gmail.com"));
+		kafkatemplate.send(TOPIC, new UserDetails(1,"kafkasender","kafkasender@gmail.com"));
 		return "Message PublishedSuccessfully";
 	}
 
