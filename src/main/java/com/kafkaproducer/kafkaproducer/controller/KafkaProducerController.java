@@ -9,8 +9,9 @@ import com.kafkaproducer.kafkaproducer.entity.UserDetails;
 
 @RestController
 public class KafkaProducerController {
+	
 	@Autowired
-	KafkaTemplate<String, Object> kafkatemplate;
+	KafkaTemplate<String, UserDetails> kafkatemplate;
 	final String TOPIC = "kafkaMessageBroker001";
 	
 	@GetMapping("/msg")
